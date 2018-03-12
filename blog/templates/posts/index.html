@@ -1,0 +1,52 @@
+{% extends "pages/base.html" %}
+
+
+{% block header %}
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename= 'img/chihiro.jpg') }}')"> 
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Where to eat({{posts|length}})</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+{% endblock %}
+
+{% block content %}
+	<!-- Main Content -->
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        	
+        	{% for art in posts %}
+        		<article>
+					<h2><a href="{{url_for('detail', id = art.id)}}">{{art.title|upper}} ({{art.note}}/5)</a></h2>
+						{#<p>{{art.content}}</p>#}
+				</article>
+			{% endfor %}
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+	<h1>Posts ({{posts|length}})</h1>
+
+	{% for art in posts %}
+		<article>
+			<h2><a href="{{url_for('detail', id = art.id)}}">{{art.title|upper}}</a></h2>
+			<p>{{art.content}}</p>
+		</article>
+	{% endfor %}

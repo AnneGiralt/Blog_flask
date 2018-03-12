@@ -1,0 +1,36 @@
+{% extends "pages/base.html" %}
+
+
+{% block header %}
+
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename= 'img/fruits.jpg') }}')"> 
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>About us</h1>
+              <span class="subheading">Anja and Anne :</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+{% endblock %}
+
+{% block content %}
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Nous sommes deux apprentis développeur récemment implanté à Rambuteau. Nous avions pour mission de créer un blog en flask. Nous avons décidé de joindre l'utile à l'agréable et avons décidés de commenter les adresses de restaurants testés par nos soins ou ceux nos collègues de formation.</p>
+          <p>Bon appétit !</p>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
