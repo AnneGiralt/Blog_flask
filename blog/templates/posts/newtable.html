@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>New Table</title>
+    </head>
+    <body>
+            <form method="POST" action="">
+                Auteur : {{ form.author(size=20) }}
+                Titre : {{ form.title(size=20) }}
+                Commentaire : {{ form.content(size=200) }}
+                Adresse : {{ form.adress(size=50) }}
+                Note: {{ form.note(size=20) }}
+
+                <input type="submit" value="Go">
+            </form>
+    </body>
+</html>
