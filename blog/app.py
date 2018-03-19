@@ -5,6 +5,8 @@ from serializer import *
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from create_post import create_post
 
+
+
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/db.sqlite3'
